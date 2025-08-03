@@ -1,7 +1,6 @@
 package com.example.demo.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 import com.example.demo.domain.Member;
 import java.util.List;
@@ -12,10 +11,10 @@ class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
-//    @AfterEach
-//    public void afterEach() {
-//        repository.clearStore();
-//    }
+    @AfterEach
+    public void afterEach() {
+        repository.clearStore();
+    }
 
     @Test
     void save() {
